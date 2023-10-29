@@ -1,12 +1,18 @@
 SRC_NAME = smartdns-Release43
+SRC_URL = https://codeload.github.com/pymumu/smartdns/tar.gz/refs/tags/Release43
 THISDIR = $(shell pwd)
 
-all: extract_test config_test
+all: download_test extract_test config_test
 	$(MAKE) -C $(SRC_NAME)
-
+	
+download_test:
+	( if [ ! -f $(SRC_NAME).tar.gz ]; then \
+		wget -t5 --timeout=20 --no-check-certificate -O $(SRC_NAME).tar.gz $(SRC_URL); \
+	fi )
+	
 extract_test:
 	( if [ ! -d $(SRC_NAME) ]; then \
-		tar -xf $(SRC_NAME).tar.gz ; \
+		tar zxf $(SRC_NAME).tar.gz ; \
 	fi )
 
 config_test:
@@ -24,3 +30,6 @@ clean:
 
 romfs:
 	$(ROMFSINST) -p +x $(THISDIR)/$(SRC_NAME)/src/smartdns /usr/bin/smartdns
+	$(ROMFSINST) -p +x $(THISDIR)/smartdns.sh /usr/bin/smartdns.sh
+	$(ROMFSINST) /etc_ro/smartdns_custom.conf
+	$(ROMFSINST) /etc_ro/ad.hosts
