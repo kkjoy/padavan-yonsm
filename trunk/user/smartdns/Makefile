@@ -9,7 +9,7 @@ download_test:
 	( if [ ! -f $(SRC_NAME).tar.gz ]; then \
 		wget -t5 --timeout=20 --no-check-certificate -O $(SRC_NAME).tar.gz $(SRC_URL); \
 	fi )
-	
+	wget https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-smartdns.conf -O ad.hosts
 extract_test:
 	( if [ ! -d $(SRC_NAME) ]; then \
 		tar zxf $(SRC_NAME).tar.gz ; \
