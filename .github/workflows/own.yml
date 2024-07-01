@@ -27,7 +27,7 @@ jobs:
       matrix:
         include:
           - build_variant: "mt7620"
-            targets: "NEWIFI-MINI"
+            targets: "NEWIFI-MINI OYE-001"
           - build_variant: "mt7621"
             targets: "RM2100"
           - build_variant: "mt7621-usb"
