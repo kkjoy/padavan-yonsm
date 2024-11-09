@@ -17,5 +17,5 @@ extract_test:
 
 
 romfs:
-	$(ROMFSINST) -p +x $(THISDIR)/$(SRC_NAME)/AdGuardHome /usr/bin/AdGuardHome
+	$(ROMFSINST) -p +x $(THISDIR)/AdGuardHome/AdGuardHome /usr/bin/AdGuardHome
 	$(ROMFSINST) -p +x $(THISDIR)/adguardhome.sh /usr/bin/adguardhome.sh
