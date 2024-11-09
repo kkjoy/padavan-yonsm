@@ -131,7 +131,7 @@ dir_y						+= xl2tpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_RPL2TP)		+= rp-l2tp
 dir_y						+= lldt
 dir_y						+= scripts
-dir_$(CONFIG_FIRMWARE_INCLUDE_SMARTDNS)	+= smartdns
+dir_$(CONFIG_FIRMWARE_INCLUDE_SMARTDNS)		+= smartdns
 dir_$(OPENSSH_ENABLED)				+= openssh
 dir_$(DROPBEAR_ENABLED)				+= dropbear
 dir_$(CONFIG_FIRMWARE_INCLUDE_HTOP)		+= htop
@@ -141,16 +141,16 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_SSWAN)		+= strongswan
 dir_$(CONFIG_FIRMWARE_INCLUDE_XUPNPD)		+= xupnpd
 dir_$(CONFIG_FIRMWARE_INCLUDE_TCPDUMP)		+= tcpdump
 dir_$(CONFIG_FIRMWARE_INCLUDE_MTR)		+= mtr
-dir_$(CONFIG_FIRMWARE_INCLUDE_SOCAT)	+= socat
-dir_$(CONFIG_FIRMWARE_INCLUDE_SRELAY)	+= srelay
-dir_$(CONFIG_FIRMWARE_INCLUDE_TUNSAFE) += tunsafe
+dir_$(CONFIG_FIRMWARE_INCLUDE_SOCAT)		+= socat
+dir_$(CONFIG_FIRMWARE_INCLUDE_SRELAY)		+= srelay
+dir_$(CONFIG_FIRMWARE_INCLUDE_TUNSAFE) 		+= tunsafe
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_WIREGUARD),y)
 dir_y += wireguard-go
 dir_y += wireguard-tools
 endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_SMBD36),y)
 dir_$(SAMBA_ENABLED)				+= samba36
-dir_y							+= wsdd2
+dir_y						+= wsdd2
 else
 dir_$(SAMBA_ENABLED)				+= samba3
 endif
@@ -158,25 +158,25 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS)	+= chnroute
 dir_$(CONFIG_FIRMWARE_INCLUDE_TTYD)		+= ttyd
 dir_$(FRP_ENABLE)				+= frp
 dir_$(SOFTETHERVPN_ENABLE)			+= softethervpn
-dir_$(CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT)         += scutclient
-dir_$(CONFIG_FIRMWARE_INCLUDE_VLMCSD)			+= vlmcsd
-dir_$(CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER)		+= dns-forwarder
-dir_$(SHADOWSOCKS_ENABLE)				+= shadowsocks
-dir_$(CONFIG_FIRMWARE_INCLUDE_LRZSZ)			+= lrzsz
-dir_$(CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM)		+= gdut-drcom
-dir_$(CONFIG_FIRMWARE_INCLUDE_DOGCOM)			+= dogcom
-dir_$(CONFIG_FIRMWARE_INCLUDE_IPERF3)			+= iperf3
-dir_$(CONFIG_FIRMWARE_INCLUDE_MINIEAP)			+= minieap
-dir_$(CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT)		+= njit-client
-dir_$(CONFIG_FIRMWARE_INCLUDE_MENTOHUST)		+= mentohust
-dir_$(CONFIG_FIRMWARE_INCLUDE_xTUN) 			+= xTun
+dir_$(CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT)       += scutclient
+dir_$(CONFIG_FIRMWARE_INCLUDE_VLMCSD)		+= vlmcsd
+dir_$(CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER)	+= dns-forwarder
+dir_$(SHADOWSOCKS_ENABLE)			+= shadowsocks
+dir_$(CONFIG_FIRMWARE_INCLUDE_LRZSZ)		+= lrzsz
+dir_$(CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM)	+= gdut-drcom
+dir_$(CONFIG_FIRMWARE_INCLUDE_DOGCOM)		+= dogcom
+dir_$(CONFIG_FIRMWARE_INCLUDE_IPERF3)		+= iperf3
+dir_$(CONFIG_FIRMWARE_INCLUDE_MINIEAP)		+= minieap
+dir_$(CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT)	+= njit-client
+dir_$(CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME)	+= adguardhome
+dir_$(CONFIG_FIRMWARE_INCLUDE_xTUN) 		+= xTun
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_WING),y)
 dir_y 			+= wing
 dir_y 			+= ipt2socks
 endif
-dir_$(TROJAN_ENABLE) 			+= trojan
-dir_$(CONFIG_FIRMWARE_INCLUDE_REDSOCKS)			+= redsocks
-dir_$(CONFIG_FIRMWARE_INCLUDE_3PROXY)			+= 3proxy
+dir_$(TROJAN_ENABLE) 				+= trojan
+dir_$(CONFIG_FIRMWARE_INCLUDE_REDSOCKS)		+= redsocks
+dir_$(CONFIG_FIRMWARE_INCLUDE_3PROXY)		+= 3proxy
 
 ifdef CONFIG_BLK_DEV_SD
 dir_$(CONFIG_FIRMWARE_INCLUDE_HDPARM)		+= hdparm
@@ -189,7 +189,7 @@ dir_y						+= comgt-0.32
 dir_y						+= uqmi
 dir_$(CONFIG_FIRMWARE_INCLUDE_LPRD)		+= LPRng
 dir_$(CONFIG_FIRMWARE_INCLUDE_U2EC)		+= u2ec
-dir_$(CONFIG_FIRMWARE_INCLUDE_DUMP1090)	+= dump1090
+dir_$(CONFIG_FIRMWARE_INCLUDE_DUMP1090)		+= dump1090
 endif
 
 ifeq ($(STORAGE_ENABLED),y)
