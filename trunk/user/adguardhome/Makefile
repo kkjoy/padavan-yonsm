@@ -2,7 +2,7 @@ SRC_NAME = AdGuardHome_linux_mipsle_softfloat.tar.gz
 SRC_TAG = v0.107.54
 SRC_URL = https://github.com/AdguardTeam/AdGuardHome/releases/download/$(SRC_TAG)/AdGuardHome_linux_mipsle_softfloat.tar.gz
 THISDIR = $(shell pwd)
-TAG
+
 all: download_test extract_test
 	
 download_test:
